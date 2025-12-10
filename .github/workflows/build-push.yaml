@@ -1,3 +1,5 @@
+name: "Build and Publish Container Image"
+
 on:
   push:
     branches:
