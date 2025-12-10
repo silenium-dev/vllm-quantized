@@ -1,11 +1,7 @@
 name: "Build and Publish Container Image"
 
 on:
-  push:
-    branches:
-      - "*"
-    tags:
-      - 'v*'
+  push: { }
   workflow_dispatch: { }
 
 permissions:
