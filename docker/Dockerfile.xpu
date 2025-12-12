@@ -57,10 +57,8 @@ RUN --mount=type=bind,source=.git,target=.git \
 ENV VLLM_TARGET_DEVICE=xpu
 ENV VLLM_WORKER_MULTIPROC_METHOD=spawn
 
-SHELL ["/bin/bash"]
 RUN --mount=type=cache,target=/root/.cache/pip \
     --mount=type=bind,source=.git,target=.git \
-    source /opt/intel/oneapi/setvars.sh --force && \
     pip install --no-build-isolation .
 
 CMD ["/bin/bash"]
